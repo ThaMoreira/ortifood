@@ -19,7 +19,7 @@
 }
 
 #cart-container table thead td {
-  background: coral;
+  background: var(--main-color);
   color: white;
   border: none;
   padding: 6px 0;
@@ -54,7 +54,7 @@
   color: black;
 }
 #cart-container table tbody i:hover {
-  color: coral;
+  color: var(--main-color);
 }
 
 #cart-bottom .coupon > div,
@@ -64,7 +64,7 @@
 
 #cart-bottom .coupon h5,
 #cart-bottom .total h5 {
-  background: coral;
+  background: var(--main-color);
   color: white;
   border: none;
   padding: 6px 12px;
