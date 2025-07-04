@@ -362,3 +362,58 @@ footer .row a:hover {
   max-width: 100%;
   object-fit: contain;
 }
+
+.card-classic {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  width: 100%;
+  max-width: 280px; /* aqui você controla o quanto o card pode crescer */
+  min-width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card-classic:hover {
+  transform: translateY(-4px);
+}
+
+.esphere {
+  width: 70px;
+  height: 30px;
+  background-color: #fff3d1;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-right: 5%;
+}
+
+.image-container img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* mantém a proporção sem cortar */
+}
+
+.card-img-container {
+  height: 60px; /* Reduzi para caber melhor no card */
+  overflow: hidden; /* Garante que a imagem não ultrapasse */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.produto-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
