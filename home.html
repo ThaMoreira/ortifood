@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ortifood - Produtos</title>
+    <title>Ortifood</title>
     <!--================== FAVICON ===================-->
     <link rel="icon" href="assets/img/o_black.png" />
     <!--================== CSS ===================-->
-    <link rel="stylesheet" href="../assets/css/loja.css" />
-    <link rel="stylesheet" href="../assets/css/mainLayout.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/mainLayout.css" />
 
     <!--================== LINK THUMBNAIL META TAGS ===================-->
     <!-- MS Tile - for Microsoft apps-->
@@ -53,7 +53,7 @@
   </head>
 
   <body>
-    <script src="../src/services/auth.js"></script>
+    <script src="./src/services/auth.js"></script>
     <!-- Bootstrap Jquery and Js separate files:  -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -69,8 +69,8 @@
     <!-- NavBar: -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
       <div class="container">
-        <a href="/index.html">
-          <img src="../assets/img/ortiFood.png" width="15%" alt="" />
+        <a href="./home.html">
+          <img src="assets/img/ortiFood.png" width="15%" alt="" />
         </a>
         <button
           class="navbar-toggler"
@@ -86,14 +86,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav_link" href="../home.html">Home</a>
+              <a class="nav_link active" href="./home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav_link active" href="/pages/loja.html">Loja</a>
+              <a class="nav_link" href="/pages/loja.html">Loja</a>
             </li>
+
             <li class="nav-item">
               <a class="nav_link" href="/pages/blog.html">Blog</a>
             </li>
+
             <li class="nav-item">
               <a class="nav_link" href="#">Sobre</a>
             </li>
@@ -108,137 +110,104 @@
                 <i class="fal fa-shopping-bag"></i>
               </a>
             </li>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <section class="my-5 py-5" id="products">
-      <div class="container mt-5 py-5">
-        <h3 class="font-weight-bold">Nossos Produtos</h3>
+    <section id="home">
+      <div class="container">
+        <h5>Faça sua feira em um só lugar</h5>
+        <h1>Os <bMain>Melhores Preços</bMain> do dia</h1>
+        <p>
+          Encontramos, compramos e separamos seu pedido <br />
+          de frutas e hortaliças
+        </p>
+        <button class="text-uppercase">Compre Agora</button>
+      </div>
+    </section>
+
+    <section class="container" id="brands">
+      <div class="row m-0 py-5">
+        <!-- As classes dessas imagens são do próprio bootstrap,
+          deixa as imagens responsivas a partir de 2 colunas pra telas
+          largas, 4 para telas médias, e 6 para telas pequenas: -->
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/1.png"
+          alt=""
+        />
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/2.png"
+          alt=""
+        />
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/3.png"
+          alt=""
+        />
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/4.png"
+          alt=""
+        />
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/5.png"
+          alt=""
+        />
+        <img
+          class="img-fluid col-lg-2 col-md-4 col-6"
+          src="assets/img/brand/6.png"
+          alt=""
+        />
+      </div>
+    </section>
+
+    <section class="w-100" id="categories">
+      <div class="row p-0 m-0">
+        <div class="one p-0 col-lg-4 col-md-12 col-12">
+          <img class="img-fluid" src="assets/img/new/naHorta_club.jpg" alt="" />
+          <div class="details">
+            <h2>Clube naHorta</h2>
+            <button class="text-uppercase">Saiba mais</button>
+          </div>
+        </div>
+
+        <div class="one p-0 col-lg-4 col-md-12 col-12">
+          <img class="img-fluid" src="assets/img/new/frutas.jpg" width="50%" alt="" />
+          <div class="details">
+            <h2>Frutas</h2>
+            <button class="text-uppercase">Comprar Agora</button>
+          </div>
+        </div>
+
+        <div class="one p-0 col-lg-4 col-md-12 col-12">
+          <img class="img-fluid" src="assets/img/new/hortalicas.jpg" alt="" />
+          <div class="details">
+            <h2>Hortaliças</h2>
+            <button class="text-uppercase">Comprar Agora</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="my-5" id="featured">
+      <div class="container text-center mt-5 py-5">
+        <h3>Em Destaque</h3>
         <!-- Linha pra separar o conteúdo: -->
-        <hr class="" />
-        <p>Aqui você pode ver os todos os produtos disponíveis na Ortifood.</p>
+        <hr class="mx-auto" />
+        <p>Aqui você pode ver os produtos em promoção hoje</p>
       </div>
 
-      <div class="row mx-auto container">
+      <div class="row mx-auto container" id="relatedProducts">
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
             <div class="card-classic p-3">
               <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/strawberry.jpg" alt="Morango" class="img-fluid produto-img">
-                <a href="#" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Morango</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/kiwi.png" alt="Kiwi" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Kiwi</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/carrot.png" alt="Cenoura" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Cenoura</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Legumes</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/rabanete.png" alt="Rabanete" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Rabanete</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Legumes</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/lettuce.jpg" alt="Alface" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Alface</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Hortaliças</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/banana.png" alt="Banana" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Banana</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/melao.png" alt="Melão" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Melão</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/pimentao.jpg" alt="Pimentão" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
+                <img src="assets/img/produce/pimentao.jpg" alt="Pimentão" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
                   <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
                 </a>
               </div>
@@ -253,56 +222,24 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
             <div class="card-classic p-3">
               <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/watermelon.jpg" alt="Melancia" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
+                <img src="assets/img/produce/pepino.jpg" alt="Pepino" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
                   <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
                 </a>
               </div>
               <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Melancia</h5>
+                <h5 class="nome-produto mb-0">Pepino</h5>
               </div>
               <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
+                <span class="esphere">Legumes</span>
               </div>
             </div>
           </div>
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
             <div class="card-classic p-3">
               <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/abacaxi.png" alt="Abacaxi" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Abacaxi</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/rucula.jpg" alt="Rucula" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Rucula</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Hortaliças</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/uva.png" alt="Uva" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
+                <img src="assets/img/fruits/uva.png" alt="Uva" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
                   <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
                 </a>
               </div>
@@ -317,91 +254,180 @@
           <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
             <div class="card-classic p-3">
               <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/pera.png" alt="Pêra" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
+                <img src="assets/img/fruits/abacaxi.png" alt="Abacaxi" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
                   <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
                 </a>
               </div>
               <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Pêra</h5>
+                <h5 class="nome-produto mb-0">Abacaxi</h5>
               </div>
               <div class="mt-auto text-start">
                 <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/brocolis.jpg" alt="Brocolis" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Brocolis</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Legumes</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/fruits/mamao.jpg" alt="Mamnão" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Mamão</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Frutas</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
-            <div class="card-classic p-3">
-              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
-                <img src="../assets/img/produce/pepino.jpg" alt="Pepino" class="img-fluid produto-img">
-                <a href="produto.html" class="d-flex align-items-center">
-                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
-                </a>
-              </div>
-              <div class="text-start mb-3">
-                <h5 class="nome-produto mb-0">Pepino</h5>
-              </div>
-              <div class="mt-auto text-start">
-                <span class="esphere">Legumes</span>
               </div>
             </div>
           </div>
       </div>
+    </section>
 
-      <!-- Nav de paginação -->
-      <nav class="row mx-auto mt-5 container" aria-label="...">
-        <ul class="pagination">
-          <li class="page-item disabled">
-            <span class="page-link">Anterior</span>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item" aria-current="page">
-            <a class="page-link" href="#">2</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#">Próximo</a>
-          </li>
-        </ul>
-      </nav>
+    <section class="my-5" id="fruits">
+      <div class="container text-center mt-5 py-5">
+        <h3>Frutas</h3>
+        <!-- Linha pra separar o conteúdo: -->
+        <hr class="mx-auto" />
+        <p>Aqui você pode conferir a seleção de frutas da Ortifood</p>
+      </div>
+
+      <div class="row mx-auto container" id="relatedProducts">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/fruits/strawberry.jpg" alt="Morango" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Morango</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Frutas</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/fruits/kiwi.png" alt="Kiwi" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Kiwi</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Frutas</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/fruits/melao.png" alt="Melão" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Melão</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Frutas</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/fruits/watermelon.jpg" alt="Melancia" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Melancia</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Frutas</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="my-5" id="produce">
+      <div class="container text-center mt-5 py-5">
+        <h3>Hortaliças</h3>
+        <!-- Linha pra separar o conteúdo: -->
+        <hr class="mx-auto" />
+        <p>
+          Aqui você pode conferir a seleção de hortaliças da Ortifood.
+        </p>
+      </div>
+
+      <div class="row mx-auto container" id="relatedProducts">
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/produce/carrot.png" alt="Cenoura" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Cenoura</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Legume</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/produce/lettuce.jpg" alt="Alface" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Alface</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Hortaliças</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/produce/rabanete.png" alt="Rabanete" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Rabanete</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Legumes</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center">
+            <div class="card-classic p-3">
+              <div class="card-img-container d-flex justify-content-between align-items-start mb-3">
+                <img src="assets/img/produce/rucula.jpg" alt="Rucula" class="img-fluid produto-img">
+                <a class="d-flex align-items-center">
+                  <i class="fas fa-arrow-right me-1 fs-3" style="color: #3b3b3b;"></i>
+                </a>
+              </div>
+              <div class="text-start mb-3">
+                <h5 class="nome-produto mb-0">Rucula</h5>
+              </div>
+              <div class="mt-auto text-start">
+                <span class="esphere">Hortaliças</span>
+              </div>
+            </div>
+          </div>
+      </div>
     </section>
 
     <footer class="mt-5 py-5">
       <div class="row container mx-auto pt-5">
         <div class="footer-one col-lg-3 col-md-6 col-12">
-          <img src="../assets/img/o_yellow.png" width="25%" alt="" />
+          <img src="assets/img/o_yellow.png" width="25%" alt="" />
           <p class="pt-3">
             A <bMain>Ortifood</bMain> é uma plataforma para você comprar frutas e hortaliças de um jeito diferente
           </p>
@@ -442,27 +468,27 @@
           <div class="row">
             <img
               class="img-fluid w-25 h-100 m-2"
-              src="../assets/img/insta/1.jpg"
+              src="assets/img/insta/1.jpg"
               alt=""
             />
             <img
               class="img-fluid w-25 h-100 m-2"
-              src="../assets/img/insta/2.jpg"
+              src="assets/img/insta/2.jpg"
               alt=""
             />
             <img
               class="img-fluid w-25 h-100 m-2"
-              src="../assets/img/insta/3.jpg"
+              src="assets/img/insta/3.jpg"
               alt=""
             />
             <img
               class="img-fluid w-25 h-100 m-2"
-              src="../assets/img/insta/4.jpg"
+              src="assets/img/insta/4.jpg"
               alt=""
             />
             <img
               class="img-fluid w-25 h-100 m-2"
-              src="../assets/img/insta/5.jpg"
+              src="assets/img/insta/5.jpg"
               alt=""
             />
           </div>
@@ -472,7 +498,7 @@
       <div class="copyright mt-5">
         <div class="row container mx-auto mb-4">
           <div class="col-lg-3 col-md-6 col-12">
-            <img src="../assets/img/payment.png" alt="" />
+            <img src="assets/img/payment.png" alt="" />
           </div>
 
           <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2">
@@ -490,71 +516,72 @@
       </div>
     </footer>
 
-<dialog id="produtoDialog">
-  <h3 id="dialogTitle" class="nome-produto mb-0" style="padding: 10px 10px 10px 15px;"></h3>
-  <div class="horizontal-line">
-  <div class="dialog-body" style="padding: 10px 10px 10px 15px;">
-    <div class="product-info">
-      <img id="dialogImage" width="25%" class="product-image">
-      <div class="product-details">
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <span class="ms-2 text-muted small">3.5 (120)</span>
+
+    <dialog id="produtoDialog">
+      <h3 id="dialogTitle" class="nome-produto mb-0" style="padding: 10px 10px 10px 15px;"></h3>
+      <div class="horizontal-line">
+      <div class="dialog-body" style="padding: 10px 10px 10px 15px;">
+        <div class="product-info">
+          <img id="dialogImage" width="25%" class="product-image">
+          <div class="product-details">
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span class="ms-2 text-muted small">3.5 (120)</span>
+            </div>
+          </div>
+        </div>
+    
+        <div class="d-flex justify-content-between align-items-center" style="padding: 0px 30px 0px 30px;">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-box me-1 icons-color"></i>
+            <span class="unidade-produto text-muted mb-0">Em estoque:</span>
+          </div>
+          <span id="product-quantity" class="text-muted mb-0"></span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center" style="padding: 15px 30px 0px 30px;">
+          <div class="d-flex align-items-center">
+            <i class="fas fa-dollar-sign icons-color"></i>
+            <span class="unidade-produto text-muted mb-0">Preço unitário:</span>
+          </div>
+          <span id="product-value" class="text-muted mb-0"></span>
+        </div>
+    
+        <div class="dropdown-container">
+          <div class="dropdown-header" id="dropdownHeader">
+            <span class="dropdown-title">
+              <i class="fas fa-dollar-sign icons-color"></i> Observações
+            </span>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+          </div>
+          <div class="dropdown-content">
+            <p>Este é o conteúdo do dropdown.</p>
+          </div>
+        </div>
+        
+        <div class="info-item">
+          <label for="quantidade">Quantidade</label>
+          <div class="input-container">
+            <input type="number" id="quantidade" placeholder="Máximo 50" max="50">
+            <span class="unit">Un.</span>
+          </div>
+        </div>
+    
+        <div class="info-item">
+          <label>Opções de Entrega</label>
+          <div class="entrega-opcoes">
+            <label><input type="radio" name="entrega"> 🏪 Retirada pelo comprador</label>
+          </div>
         </div>
       </div>
-    </div>
-
-    <div class="d-flex justify-content-between align-items-center" style="padding: 0px 30px 0px 30px;">
-      <div class="d-flex align-items-center">
-        <i class="fas fa-box me-1 icons-color"></i>
-        <span class="unidade-produto text-muted mb-0">Em estoque:</span>
+      <div class="mt-auto text-end dialog-footer" style="padding: 20px;">
+        <button id="closeDialog">Fechar</button>
       </div>
-      <span id="product-quantity" class="text-muted mb-0"></span>
-    </div>
-    <div class="d-flex justify-content-between align-items-center" style="padding: 15px 30px 0px 30px;">
-      <div class="d-flex align-items-center">
-        <i class="fas fa-dollar-sign icons-color"></i>
-        <span class="unidade-produto text-muted mb-0">Preço unitário:</span>
-      </div>
-      <span id="product-value" class="text-muted mb-0"></span>
-    </div>
-
-    <div class="dropdown-container">
-      <div class="dropdown-header" id="dropdownHeader">
-        <span class="dropdown-title">
-          <i class="fas fa-dollar-sign icons-color"></i> Observações
-        </span>
-        <i class="fas fa-chevron-down dropdown-icon"></i>
-      </div>
-      <div class="dropdown-content">
-        <p>Este é o conteúdo do dropdown.</p>
-      </div>
-    </div>
+    </dialog>
     
-    <div class="info-item">
-      <label for="quantidade">Quantidade</label>
-      <div class="input-container">
-        <input type="number" id="quantidade" placeholder="Máximo 50" max="50">
-        <span class="unit">Un.</span>
-      </div>
-    </div>
-
-    <div class="info-item">
-      <label>Opções de Entrega</label>
-      <div class="entrega-opcoes">
-        <label><input type="radio" name="entrega"> 🏪 Retirada pelo comprador</label>
-      </div>
-    </div>
-  </div>
-  <div class="mt-auto text-end dialog-footer" style="padding: 20px;">
-    <button id="closeDialog">Fechar</button>
-  </div>
-</dialog>
-
-<script type="module" src="../handler/dialog-handler.js"></script>
+    <script type="module" src="../handler/dialog-handler.js"></script>
   </body>
 </html>
